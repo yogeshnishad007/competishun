@@ -57,13 +57,25 @@ const Home =()=> {
         onChange={(e) => setQuery(e.target.value)}
       />
       <button onClick={handleSearch}>Search</button>
-      {movies.map((movie) => (
 
-          <>
-               <p>{movie.title}</p>
-          </>
-           
-      ))}
+    <div className='card-container'>
+                 
+      {movies.map((ele) => (
+
+        <>
+            <div key={ele.id} className="card-item">
+                
+                <img src={`https://image.tmdb.org/t/p/w500${ele.poster_path}`}alt={ele.poster_path} />
+                <p>{ele.title}</p>
+                  <p>{ele.genre_ids.join(', ')}</p>
+            </div>
+            
+        </>
+ 
+     ))}
+
+ </div>
+      
     </div>
   );
 }
