@@ -1,6 +1,7 @@
 import  { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "../Style/Nav.css"
+import GenreNameFinder from './GenreNameFinder';
 const apiKey = 'c5a2b9797c94ce965b31f43c8078586b';
 const tmdbBaseUrl = 'https://api.themoviedb.org/3';
 
@@ -67,7 +68,7 @@ const Home =()=> {
                 
                 <img src={`https://image.tmdb.org/t/p/w500${ele.poster_path}`}alt={ele.poster_path} />
                 <p>{ele.title}</p>
-                  <p>{ele.genre_ids.join(', ')}</p>
+                  <p><GenreNameFinder genreIds={ele.genre_ids}/> </p>
             </div>
             
         </>
