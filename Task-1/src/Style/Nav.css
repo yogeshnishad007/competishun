@@ -1,0 +1,12 @@
+
+
+.nav-container{
+
+      display: flex;
+      justify-content: space-around;
+      
+}
+
+.link{
+    text-decoration: none;
+}

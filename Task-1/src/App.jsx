@@ -1,16 +1,13 @@
 
-import Home from "./Components/Home"
 import SignIn from "./Components/Signin"
-
-function App() {
+import AllRoutes from "./Components/AllRoutes"
+const App = ()=> {
  
-
   return (
     <>
-        <h1>Task-1</h1>
-    
+ 
         <SignIn/>
-        <Home/>
+       
        
     </>
   )

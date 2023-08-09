@@ -1,18 +1,12 @@
 import { useState } from "react";
 import {auth,provider} from "../Auth/FirebaseConfig";
 import {signInWithPopup} from "firebase/auth";
-
+import AllRoutes from "./AllRoutes"
 import"../Style/SignIn.css"
+
 
 const SignIn =()=> {
     const [value,setValue] = useState(null)
-
-    // const handleClick =()=>{
-    //     signInWithPopup(auth,provider).then((data)=>{
-    //         setValue(data.value)
-    //         localStorage.setItem("email",data.value.email)
-    //     })
-    // }
 
     const handleClick=()=>{
         signInWithPopup(auth, provider).then((result)=>{
@@ -33,9 +27,6 @@ const SignIn =()=> {
     }
 
     console.log("value",value)
-    // useEffect(()=>{
-    //     setValue(localStorage.getItem('email'))
-    // },[])
 
 return (
     <div>
@@ -54,6 +45,12 @@ return (
                         LOGOUT
                </button>
             </div>
+
+            <div>
+            <AllRoutes displayName={value.displayName} />
+            </div>
+
+          
              
             </>
           ):(
