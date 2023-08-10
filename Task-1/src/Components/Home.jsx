@@ -70,7 +70,8 @@ const Home =()=> {
       {movies.map((ele) => (
 
         <>
-            <div key={ele.id} className="card-item"  style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${ele.poster_path})` }}>
+                  <Link key={ele.id} to={`/movie/${ele.id}`} className="card-item">
+            <div key={ele.id} className="card-item" >
                   
                <p>{ele.title}</p>
                 
@@ -84,6 +85,7 @@ const Home =()=> {
                       <button>Watchlist</button>
                   </div> */}
             </div>
+            </Link>
             
         </>
  
