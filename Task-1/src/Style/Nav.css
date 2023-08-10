@@ -13,17 +13,34 @@
 
 /*--------------------------------------- CARD ITEMS -----------------------------*/
 
+#animated {
+  transition: 5s ease;
+  background-size: initial;
+  background-repeat: no-repeat;
+  animation-fill-mode: forwards;
+  background-position: bottom center;
+}
+
+#animated:hover {
+  transition: 5s ease;
+  background-position: top center;
+}
+
 .card-container{
       
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 10px;
+    gap: 1em;
     margin-top: 60px;
+
+  
 }
 
 .card-item{
 
      border: 2px solid red;
+     height: 60vh;
+  
 }
 .card-item>img{
       
@@ -31,5 +48,36 @@
     height: 40vh;
 }
 
+.card-item>p{
+    font-size: .8rem;
+  font-weight: normal;
+  font-variant: small-caps;
+  margin: 0;
+}
 
-/* --------------------    ----------------------------------------*/
+
+/* -------------------- SEARCH BAR   ----------------------------------------*/
+
+.search-container{
+  margin-left: 10em;
+}
+
+.search-container>button{
+    background-color: rgba(0, 0, 0, .75);
+    color: white;
+    padding: .7rem 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.75);
+    border-radius: .8rem;
+    margin-left: .5rem;   
+}
+
+.search {
+    font-size: 1.2rem;
+   border-radius:.8rem;
+   border: 1px solid #ddd;
+   padding-top: .2rem;
+   padding-bottom: .2rem;
+    width: 70%;
+  }
+  
+  

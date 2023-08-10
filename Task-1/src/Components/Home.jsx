@@ -51,24 +51,38 @@ const Home =()=> {
           <Link className='link' to="/watchlist">Watchlist</Link>
           </h3>
         </div>
-      <input
-        type="text"
-        placeholder="Search movies..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      <button onClick={handleSearch}>Search</button>
+
+
+        <div className='search-container'>
+              <input
+               className='search'
+              type="text"
+              placeholder="Search movies..."
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+            <button onClick={handleSearch}>Search</button>
+        </div>
+      
 
     <div className='card-container'>
                  
       {movies.map((ele) => (
 
         <>
-            <div key={ele.id} className="card-item">
+            <div key={ele.id} className="card-item"  style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${ele.poster_path})` }}>
+                  
+               <p>{ele.title}</p>
                 
-                <img src={`https://image.tmdb.org/t/p/w500${ele.poster_path}`}alt={ele.poster_path} />
-                <p>{ele.title}</p>
+                 
+                <img id='animated ' src={`https://image.tmdb.org/t/p/w500${ele.poster_path}`}alt={ele.poster_path} />
+                
                   <p><GenreNameFinder genreIds={ele.genre_ids}/> </p>
+
+                  {/* <div>
+                      <button>Favorites</button>
+                      <button>Watchlist</button>
+                  </div> */}
             </div>
             
         </>
