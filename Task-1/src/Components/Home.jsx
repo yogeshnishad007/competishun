@@ -70,22 +70,20 @@ const Home =()=> {
       {movies.map((ele) => (
 
         <>
-                  <Link key={ele.id} to={`/movie/${ele.id}`} className="card-item">
+                
             <div key={ele.id} className="card-item" >
                   
                <p>{ele.title}</p>
                 
-                 
+               <Link key={ele.id} to={`/movie/${ele.id}`} className="card-item">
                 <img id='animated ' src={`https://image.tmdb.org/t/p/w500${ele.poster_path}`}alt={ele.poster_path} />
+                </Link>
                 
                   <p><GenreNameFinder genreIds={ele.genre_ids}/> </p>
 
-                  {/* <div>
-                      <button>Favorites</button>
-                      <button>Watchlist</button>
-                  </div> */}
+                
             </div>
-            </Link>
+          
             
         </>
  
