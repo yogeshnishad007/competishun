@@ -8,15 +8,15 @@ import MovieDetails from "./MovieDetails"
 import SignIn from './Signin';
 
 
-const AllRoutes = (props) => {
+const AllRoutes = () => {
   return (
     <Routes>
         <>
-      <Route
+      {/* <Route
         path="/"
         element={props.displayName ? <Home /> : <Navigate to="/signin" />}
-      />
-      {/* <Route path="/" element={<Home/>} /> */}
+      /> */}
+      <Route path="/" element={<Home/>} />
       <Route path="/signin" element={<SignIn />} />
       <Route path="/favorites" element={<Favorites />} />
       <Route path="/watchlist" element={<Watchlist />} />

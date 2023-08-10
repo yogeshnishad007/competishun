@@ -25,13 +25,25 @@ const Home =()=> {
     }
   };
 
-  const handleSearch = async () => {
-    if(query.trim() === ''){
-      alert("Fill data")
-    } else {
+  const handleSearch = async (e) => {
+     const newQuery = e.target.value.trim(); 
+     setQuery(e.target.value.trim())
+
+     if(newQuery ===""){
+      try {
+        const response = await fetch(`${tmdbBaseUrl}/movie/popular?api_key=${apiKey}`);
+        const data = await response.json();
+        setMovies(data.results);
+      } catch (error) {
+        console.error(error);
+      }
+     } 
+     else
+     {
+
       try {
         const response = await fetch(
-          `${tmdbBaseUrl}/search/movie?api_key=${apiKey}&query=${query}`
+          `${tmdbBaseUrl}/search/movie?api_key=${apiKey}&query=${newQuery}`
         );
         const data = await response.json();
         setMovies(data.results);
@@ -39,7 +51,9 @@ const Home =()=> {
         console.error(error);
       }
 
-    }
+     }
+      
+  
    
   };
 
@@ -65,7 +79,7 @@ const Home =()=> {
               type="text"
               placeholder="Search movies..."
               value={query}
-              onChange={(e) => setQuery(e.target.value)}
+              onChange={handleSearch}
               required
             />
             <button onClick={handleSearch}>Search</button>
