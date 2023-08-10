@@ -26,21 +26,27 @@ const Home =()=> {
   };
 
   const handleSearch = async () => {
-    try {
-      const response = await fetch(
-        `${tmdbBaseUrl}/search/movie?api_key=${apiKey}&query=${query}`
-      );
-      const data = await response.json();
-      setMovies(data.results);
-    } catch (error) {
-      console.error(error);
+    if(query.trim() === ''){
+      alert("Fill data")
+    } else {
+      try {
+        const response = await fetch(
+          `${tmdbBaseUrl}/search/movie?api_key=${apiKey}&query=${query}`
+        );
+        const data = await response.json();
+        setMovies(data.results);
+      } catch (error) {
+        console.error(error);
+      }
+
     }
+   
   };
 
   return (
     <div>
 
-        <div className="nav-container">
+      <div className="nav-container">
         <h3>
           <Link className='link' to="/">Movies</Link>
         </h3>
@@ -60,6 +66,7 @@ const Home =()=> {
               placeholder="Search movies..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
+              required
             />
             <button onClick={handleSearch}>Search</button>
         </div>

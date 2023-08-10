@@ -38,9 +38,19 @@ const MovieDetails = () => {
   return (
     <div>
 
-                
+        <div className="nav-container">
+                <h3>
+                <Link className='link' to="/">Movies</Link>
+                </h3>
+                <h3>
+                <Link  className='link'to="/favorites">Favorites</Link>
+                </h3>
+                <h3>
+                <Link className='link' to="/watchlist">Watchlist</Link>
+                </h3>
+            </div>
 
-                    
+                     
 
            <div>
                    <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title}/>
