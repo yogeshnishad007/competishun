@@ -82,7 +82,7 @@ const Home =()=> {
               onChange={handleSearch}
               required
             />
-            <button onClick={handleSearch}>Search</button>
+           
         </div>
       
 
