@@ -37,8 +37,6 @@ const SignIn = () => {
               <img src={value.photoURL} alt="dp" referrerPolicy="no-referrer" />
             </div>
 
-            <h3>Welcome {value.displayName}</h3>
-
             <button className="" onClick={handleLogout}>
               LOGOUT
             </button>
@@ -50,14 +48,11 @@ const SignIn = () => {
         </>
       ) : (
         <>
-             <div className="sign-btn">
-
-                     <h1>Welcome to MoviX</h1>
-                 <button onClick={handleClick}>Signin With Google</button>
-             </div>
-               
+          <div className="sign-btn">
+            <h1>Welcome to MoviX</h1>
+            <button onClick={handleClick}>Signin With Google</button>
+          </div>
         </>
-       
       )}
     </div>
   );
