@@ -32,19 +32,24 @@ const SignIn = () => {
     <div>
       {value ? (
         <>
-          <div className="profile-container">
-            <div className="profile-pic">
-              <img src={value.photoURL} alt="dp" referrerPolicy="no-referrer" />
+    
+
+     
+            <div className="navigation">
+              
+              <a className="button" href="">
+                <img src={value.photoURL} alt="dp" referrerPolicy="no-referrer" />
+              
+              <div className="logout" onClick={handleLogout}>LOGOUT</div>
+
+              </a>
+              
             </div>
 
-            <button className="" onClick={handleLogout}>
-              LOGOUT
-            </button>
-          </div>
-
-          <div>
+          <div className="route">
             <AllRoutes displayName={value.displayName} />
           </div>
+      
         </>
       ) : (
         <>
@@ -58,3 +63,4 @@ const SignIn = () => {
   );
 };
 export default SignIn;
+
