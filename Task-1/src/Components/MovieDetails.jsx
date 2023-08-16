@@ -1,5 +1,6 @@
 import {useEffect,useState} from 'react';
 import { useParams,Link } from 'react-router-dom';
+import NavBar from './NavBar';
 
 
 const apiKey = 'c5a2b9797c94ce965b31f43c8078586b';
@@ -38,17 +39,7 @@ const MovieDetails = () => {
   return (
     <div>
 
-        <div className="nav-container">
-                <h3>
-                <Link className='link' to="/">Movies</Link>
-                </h3>
-                <h3>
-                <Link  className='link'to="/favorites">Favorites</Link>
-                </h3>
-                <h3>
-                <Link className='link' to="/watchlist">Watchlist</Link>
-                </h3>
-            </div>
+        <NavBar/>
 
                      
 
