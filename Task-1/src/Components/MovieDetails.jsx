@@ -44,11 +44,13 @@ const MovieDetails = () => {
                      
 
            <div>
+
                    <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title}/>
                     <h2>{movie.title}</h2>
                     <p>{genreNames}</p>
 
                     <button onClick={handleWatchlist}>Add to Watchlist</button>
+                    
            </div>
          
     </div>

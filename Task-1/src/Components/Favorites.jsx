@@ -1,29 +1,14 @@
-import { Link } from "react-router-dom"
+import NavBar from "./NavBar";
 
 const Favorites = () => {
   return (
     <div>
-       <div className="nav-container">
-        <h3>
-          <Link to="/">Movies</Link>
-        </h3>
-        <h3>
-          <Link to="/favorites">Favorites</Link>
-        </h3>
-        <h3>
-          <Link to="/watchlist">Watchlist</Link>
-          </h3>
-        </div>
-      
-      
-
+      <NavBar />
       <div>
-            <h1>Favorites</h1>
+        <h1>Favorites</h1>
       </div>
-
-
     </div>
-  )
-}
+  );
+};
 
-export default Favorites
+export default Favorites;
