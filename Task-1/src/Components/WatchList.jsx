@@ -1,20 +1,14 @@
-
-import NavBar from "./NavBar"
+import NavBar from "./NavBar";
 const WatchList = () => {
   return (
     <div>
-      
-     <NavBar/>
-      
+      <NavBar />
+
       <div>
-            <h1>    WatchList</h1>
+        <h1> WatchList</h1>
       </div>
-       
-
-
-
     </div>
-  )
-}
+  );
+};
 
-export default WatchList
+export default WatchList;

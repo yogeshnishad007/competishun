@@ -1,7 +1,7 @@
 import {useEffect,useState} from 'react';
 import { useParams} from 'react-router-dom';
 import NavBar from './NavBar';
-
+import "../Style/MovieDetails.css"
 
 const apiKey = 'c5a2b9797c94ce965b31f43c8078586b';
 const tmdbBaseUrl = 'https://api.themoviedb.org/3';
@@ -43,7 +43,7 @@ const MovieDetails = () => {
 
                      
 
-           <div>
+           <div className='card-box'>
 
                    <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title}/>
                     <h2>{movie.title}</h2>
