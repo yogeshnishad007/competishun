@@ -31,6 +31,10 @@ const MovieDetails = () => {
     console.log("Added to Watchlist:", movie.title);
   };
 
+  const handleFavorites =()=>{
+    
+  }
+
   if (!movie) {
     return <div>Loading...</div>;
   }
@@ -51,7 +55,7 @@ const MovieDetails = () => {
 
         <div>
           <button onClick={handleWatchlist}>Add to Watchlist</button>
-          <button>Add to Favorites</button>
+          <button onClick={handleFavorites}>Add to Favorites</button>
         </div>
       </div>
     </div>
