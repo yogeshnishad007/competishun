@@ -61,7 +61,11 @@ const Home =()=> {
     <div>
 
         <NavBar/>
-
+        
+         <div>
+             <button>Comdey</button>
+             <button>Action</button>
+         </div>
 
         <div className='search-container'>
               <input
