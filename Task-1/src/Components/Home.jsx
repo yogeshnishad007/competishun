@@ -55,6 +55,13 @@ const Home =()=> {
     
   };
 
+  const handleComedy=()=>{
+
+  }
+
+  const handleAction =()=>{
+    
+  }
  
 
   return (
