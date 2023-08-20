@@ -52,10 +52,10 @@ const Home =()=> {
       }
 
      }
-      
-  
-   
+    
   };
+
+ 
 
   return (
     <div>
@@ -63,8 +63,8 @@ const Home =()=> {
         <NavBar/>
         
          <div>
-             <button>Comdey</button>
-             <button>Action</button>
+             <button onClick={handleComedy}>Comdey</button>
+             <button onClick={handleAction}>Action</button>
          </div>
 
         <div className='search-container'>
