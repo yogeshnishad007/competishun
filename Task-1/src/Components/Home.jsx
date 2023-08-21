@@ -56,10 +56,11 @@ const Home =()=> {
   };
 
   const handleComedy=()=>{
-
+       console.log("comdey")
   }
 
   const handleAction =()=>{
+    console.log("action")
     
   }
  
