@@ -63,6 +63,10 @@ const Home =()=> {
     console.log("action")
     
   }
+
+  const handleSci =()=>{
+    
+  }
  
 
   return (
@@ -73,6 +77,7 @@ const Home =()=> {
          <div>
              <button onClick={handleComedy}>Comdey</button>
              <button onClick={handleAction}>Action</button>
+             <button onClick={handleSci}>Sci-Fi</button>
          </div>
 
         <div className='search-container'>
